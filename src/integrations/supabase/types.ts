@@ -14,7 +14,210 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      meal_plans: {
+        Row: {
+          breakfast: Json | null
+          created_at: string
+          dinner: Json | null
+          id: string
+          lunch: Json | null
+          meals_completed: number | null
+          plan_date: string
+          snacks: Json | null
+          total_calories: number | null
+          total_carbs_g: number | null
+          total_fat_g: number | null
+          total_protein_g: number | null
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          breakfast?: Json | null
+          created_at?: string
+          dinner?: Json | null
+          id?: string
+          lunch?: Json | null
+          meals_completed?: number | null
+          plan_date: string
+          snacks?: Json | null
+          total_calories?: number | null
+          total_carbs_g?: number | null
+          total_fat_g?: number | null
+          total_protein_g?: number | null
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          breakfast?: Json | null
+          created_at?: string
+          dinner?: Json | null
+          id?: string
+          lunch?: Json | null
+          meals_completed?: number | null
+          plan_date?: string
+          snacks?: Json | null
+          total_calories?: number | null
+          total_carbs_g?: number | null
+          total_fat_g?: number | null
+          total_protein_g?: number | null
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          activity_level: string | null
+          age: number | null
+          bmr: number | null
+          created_at: string
+          dietary_preference: string | null
+          first_name: string | null
+          fitness_goal: string | null
+          food_allergies: string[] | null
+          gender: string | null
+          height_cm: number | null
+          id: string
+          last_name: string | null
+          onboarding_completed: boolean | null
+          target_calories: number | null
+          target_carbs_g: number | null
+          target_fat_g: number | null
+          target_protein_g: number | null
+          tdee: number | null
+          updated_at: string
+          user_id: string
+          weight_kg: number | null
+          workout_equipment: string | null
+          workout_preferences: string[] | null
+        }
+        Insert: {
+          activity_level?: string | null
+          age?: number | null
+          bmr?: number | null
+          created_at?: string
+          dietary_preference?: string | null
+          first_name?: string | null
+          fitness_goal?: string | null
+          food_allergies?: string[] | null
+          gender?: string | null
+          height_cm?: number | null
+          id?: string
+          last_name?: string | null
+          onboarding_completed?: boolean | null
+          target_calories?: number | null
+          target_carbs_g?: number | null
+          target_fat_g?: number | null
+          target_protein_g?: number | null
+          tdee?: number | null
+          updated_at?: string
+          user_id: string
+          weight_kg?: number | null
+          workout_equipment?: string | null
+          workout_preferences?: string[] | null
+        }
+        Update: {
+          activity_level?: string | null
+          age?: number | null
+          bmr?: number | null
+          created_at?: string
+          dietary_preference?: string | null
+          first_name?: string | null
+          fitness_goal?: string | null
+          food_allergies?: string[] | null
+          gender?: string | null
+          height_cm?: number | null
+          id?: string
+          last_name?: string | null
+          onboarding_completed?: boolean | null
+          target_calories?: number | null
+          target_carbs_g?: number | null
+          target_fat_g?: number | null
+          target_protein_g?: number | null
+          tdee?: number | null
+          updated_at?: string
+          user_id?: string
+          weight_kg?: number | null
+          workout_equipment?: string | null
+          workout_preferences?: string[] | null
+        }
+        Relationships: []
+      }
+      progress_entries: {
+        Row: {
+          body_fat_percentage: number | null
+          created_at: string
+          id: string
+          muscle_mass_kg: number | null
+          notes: string | null
+          recorded_at: string
+          user_id: string
+          weight_kg: number | null
+        }
+        Insert: {
+          body_fat_percentage?: number | null
+          created_at?: string
+          id?: string
+          muscle_mass_kg?: number | null
+          notes?: string | null
+          recorded_at?: string
+          user_id: string
+          weight_kg?: number | null
+        }
+        Update: {
+          body_fat_percentage?: number | null
+          created_at?: string
+          id?: string
+          muscle_mass_kg?: number | null
+          notes?: string | null
+          recorded_at?: string
+          user_id?: string
+          weight_kg?: number | null
+        }
+        Relationships: []
+      }
+      workout_sessions: {
+        Row: {
+          calories_burned: number | null
+          completed: boolean | null
+          completed_at: string | null
+          created_at: string
+          duration_minutes: number | null
+          exercises: Json | null
+          id: string
+          scheduled_for: string | null
+          user_id: string
+          workout_name: string
+          workout_type: string | null
+        }
+        Insert: {
+          calories_burned?: number | null
+          completed?: boolean | null
+          completed_at?: string | null
+          created_at?: string
+          duration_minutes?: number | null
+          exercises?: Json | null
+          id?: string
+          scheduled_for?: string | null
+          user_id: string
+          workout_name: string
+          workout_type?: string | null
+        }
+        Update: {
+          calories_burned?: number | null
+          completed?: boolean | null
+          completed_at?: string | null
+          created_at?: string
+          duration_minutes?: number | null
+          exercises?: Json | null
+          id?: string
+          scheduled_for?: string | null
+          user_id?: string
+          workout_name?: string
+          workout_type?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

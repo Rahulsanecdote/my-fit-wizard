@@ -8,89 +8,139 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
+    /* Fitness-focused color palette */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
+    --foreground: 215 16% 22%;
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
+    --card-foreground: 215 16% 22%;
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
+    --popover-foreground: 215 16% 22%;
+    
+    /* Primary: Energetic Blue */
+    --primary: 213 89% 52%;
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 213 89% 65%;
+    
+    /* Secondary: Fresh Green */
+    --secondary: 142 84% 24%;
+    --secondary-foreground: 0 0% 98%;
+    --secondary-light: 142 70% 45%;
+    
+    /* Accent: Vibrant Orange */
+    --accent: 24 95% 53%;
+    --accent-foreground: 0 0% 98%;
+    --accent-light: 24 95% 65%;
+    
+    /* Neutral tones */
+    --muted: 215 13% 96%;
+    --muted-foreground: 215 16% 46%;
+    --border: 215 13% 90%;
+    --input: 215 13% 90%;
+    --ring: 213 89% 52%;
+    
+    /* Status colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --success: 142 84% 24%;
+    --success-foreground: 0 0% 98%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 98%;
+    
+    /* Chart colors for fitness data */
+    --chart-1: 213 89% 52%;
+    --chart-2: 142 84% 24%;
+    --chart-3: 24 95% 53%;
+    --chart-4: 283 89% 52%;
+    --chart-5: 38 92% 50%;
+    
+    /* Fitness-specific gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(213 89% 52%), hsl(213 89% 65%));
+    --gradient-secondary: linear-gradient(135deg, hsl(142 84% 24%), hsl(142 70% 45%));
+    --gradient-hero: linear-gradient(135deg, hsl(213 89% 52%), hsl(142 84% 24%));
+    
+    /* Shadows and effects */
+    --shadow-fitness: 0 10px 30px -10px hsl(213 89% 52% / 0.3);
+    --shadow-glow: 0 0 40px hsl(213 89% 65% / 0.4);
+    
+    /* Other design tokens */
+    --radius: 0.75rem;
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Sidebar colors */
+    --sidebar-background: 215 13% 98%;
+    --sidebar-foreground: 215 16% 22%;
+    --sidebar-primary: 213 89% 52%;
     --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: 215 13% 94%;
+    --sidebar-accent-foreground: 215 16% 22%;
+    --sidebar-border: 215 13% 90%;
+    --sidebar-ring: 213 89% 52%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Dark mode fitness theme */
+    --background: 215 28% 7%;
+    --foreground: 215 13% 94%;
+    --card: 215 28% 9%;
+    --card-foreground: 215 13% 94%;
+    --popover: 215 28% 9%;
+    --popover-foreground: 215 13% 94%;
+    
+    /* Primary: Bright Blue */
+    --primary: 213 89% 60%;
+    --primary-foreground: 215 28% 7%;
+    --primary-glow: 213 89% 70%;
+    
+    /* Secondary: Bright Green */
+    --secondary: 142 70% 45%;
+    --secondary-foreground: 215 28% 7%;
+    --secondary-light: 142 70% 55%;
+    
+    /* Accent: Bright Orange */
+    --accent: 24 95% 60%;
+    --accent-foreground: 215 28% 7%;
+    --accent-light: 24 95% 70%;
+    
+    /* Neutral tones */
+    --muted: 215 28% 15%;
+    --muted-foreground: 215 13% 65%;
+    --border: 215 28% 15%;
+    --input: 215 28% 15%;
+    --ring: 213 89% 60%;
+    
+    /* Status colors */
+    --destructive: 0 84% 65%;
+    --destructive-foreground: 215 28% 7%;
+    --success: 142 70% 45%;
+    --success-foreground: 215 28% 7%;
+    --warning: 38 92% 55%;
+    --warning-foreground: 215 28% 7%;
+    
+    /* Chart colors for dark mode */
+    --chart-1: 213 89% 60%;
+    --chart-2: 142 70% 45%;
+    --chart-3: 24 95% 60%;
+    --chart-4: 283 89% 60%;
+    --chart-5: 38 92% 55%;
+    
+    /* Dark mode gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(213 89% 60%), hsl(213 89% 70%));
+    --gradient-secondary: linear-gradient(135deg, hsl(142 70% 45%), hsl(142 70% 55%));
+    --gradient-hero: linear-gradient(135deg, hsl(213 89% 60%), hsl(142 70% 45%));
+    
+    /* Dark mode shadows */
+    --shadow-fitness: 0 10px 30px -10px hsl(213 89% 60% / 0.4);
+    --shadow-glow: 0 0 40px hsl(213 89% 70% / 0.5);
+    
+    /* Sidebar dark colors */
+    --sidebar-background: 215 28% 9%;
+    --sidebar-foreground: 215 13% 94%;
+    --sidebar-primary: 213 89% 60%;
+    --sidebar-primary-foreground: 215 28% 7%;
+    --sidebar-accent: 215 28% 15%;
+    --sidebar-accent-foreground: 215 13% 94%;
+    --sidebar-border: 215 28% 15%;
+    --sidebar-ring: 213 89% 60%;
   }
 }
 
