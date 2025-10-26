@@ -6,8 +6,9 @@ import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useAuth } from '@/contexts/AuthContext';
-import { useToast } from '@/hooks/use-toast';
-import { Dumbbell, Loader2 } from 'lucide-react';
+import { useToast } from '@/components/ui/use-toast';
+import { Dumbbell, Loader2, Settings } from 'lucide-react';
+import { enableMockAuth, shouldUseMockAuth } from '@/lib/mockAuth';
 
 export const AuthPage = () => {
   const { user, signIn, signUp } = useAuth();
@@ -92,7 +93,15 @@ export const AuthPage = () => {
       } else {
         toast({
           title: "Welcome to FitGenie AI!",
-          description: "Your account has been created. Please check your email to verify your account."
+          description: "Your account has been created successfully! Redirecting to dashboard..."
+        });
+        // Clear form
+        setFormData({
+          email: '',
+          password: '',
+          confirmPassword: '',
+          firstName: '',
+          lastName: ''
         });
       }
     } catch (error) {
@@ -260,6 +269,27 @@ export const AuthPage = () => {
                 </form>
               </TabsContent>
             </Tabs>
+
+            {/* Development Mode Toggle */}
+            {import.meta.env.DEV && !shouldUseMockAuth() && (
+              <div className="mt-4 text-center">
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  onClick={enableMockAuth}
+                  className="text-xs"
+                >
+                  <Settings className="h-3 w-3 mr-1" />
+                  Enable Dev Mode (Skip Email Verification)
+                </Button>
+              </div>
+            )}
+
+            {shouldUseMockAuth() && (
+              <div className="mt-4 text-center text-xs text-yellow-600 bg-yellow-50 p-2 rounded">
+                🔧 Development Mode Active - Email verification disabled
+              </div>
+            )}
 
             {/* Disclaimer */}
             <div className="mt-6 text-xs text-muted-foreground text-center">

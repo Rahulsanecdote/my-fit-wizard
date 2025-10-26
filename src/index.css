@@ -1,146 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* PREMIUM DESIGN SYSTEM - NIKE TRAINING CLUB INSPIRED */
 
 @layer base {
   :root {
-    /* Fitness-focused color palette */
+    /* Premium Athletic Color System */
     --background: 0 0% 100%;
-    --foreground: 215 16% 22%;
+    --foreground: 0 0% 0%;
     --card: 0 0% 100%;
-    --card-foreground: 215 16% 22%;
+    --card-foreground: 0 0% 0%;
     --popover: 0 0% 100%;
-    --popover-foreground: 215 16% 22%;
+    --popover-foreground: 0 0% 0%;
     
-    /* Primary: Energetic Blue */
-    --primary: 213 89% 52%;
-    --primary-foreground: 0 0% 98%;
-    --primary-glow: 213 89% 65%;
+    /* Nike-Inspired Primary Palette */
+    --primary: 0 0% 0%; /* Deep Black */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 14% 11%; /* Cool Gray */
+    --secondary-foreground: 0 0% 100%;
+    --accent: 16 100% 60%; /* Electric Orange */
+    --accent-foreground: 0 0% 100%;
     
-    /* Secondary: Fresh Green */
-    --secondary: 142 84% 24%;
-    --secondary-foreground: 0 0% 98%;
-    --secondary-light: 142 70% 45%;
+    /* Athletic Energy Colors */
+    --energy: 45 100% 62%; /* Energetic Yellow */
+    --energy-foreground: 0 0% 0%;
+    --success: 142 71% 45%; /* Vibrant Green */
+    --success-foreground: 0 0% 100%;
+    --power: 300 100% 50%; /* Electric Pink */
+    --power-foreground: 0 0% 100%;
+    --focus: 195 100% 50%; /* Electric Blue */
+    --focus-foreground: 0 0% 100%;
     
-    /* Accent: Vibrant Orange */
-    --accent: 24 95% 53%;
-    --accent-foreground: 0 0% 98%;
-    --accent-light: 24 95% 65%;
+    /* Supporting Grays */
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+    --border: 0 0% 89%;
+    --input: 0 0% 89%;
+    --ring: 0 0% 0%;
     
-    /* Neutral tones */
-    --muted: 215 13% 96%;
-    --muted-foreground: 215 16% 46%;
-    --border: 215 13% 90%;
-    --input: 215 13% 90%;
-    --ring: 213 89% 52%;
-    
-    /* Status colors */
+    /* Athletic Feedback Colors */
     --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
-    --success: 142 84% 24%;
-    --success-foreground: 0 0% 98%;
+    --destructive-foreground: 0 0% 100%;
     --warning: 38 92% 50%;
-    --warning-foreground: 0 0% 98%;
+    --warning-foreground: 0 0% 0%;
+    
+    /* Border Radius System */
+    --radius: 1rem;
+    --radius-sm: 0.5rem;
+    --radius-lg: 1.5rem;
+    --radius-xl: 2rem;
+    
+    /* Premium Athletic Gradients */
+    --gradient-primary: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+    --gradient-secondary: linear-gradient(135deg, #1C1C1E 0%, #2C2C2E 100%);
+    --gradient-hero: linear-gradient(135deg, #000000 0%, #1C1C1E 60%, #FF6B35 100%);
+    --gradient-success: linear-gradient(135deg, #30D158 0%, #34C759 100%);
+    --gradient-energy: linear-gradient(135deg, #FFD23F 0%, #FF6B35 100%);
+    --gradient-power: linear-gradient(135deg, #FF0080 0%, #7928CA 100%);
+    --gradient-focus: linear-gradient(135deg, #00D4FF 0%, #0099CC 100%);
+    --gradient-midnight: linear-gradient(135deg, #000000 0%, #434343 100%);
+    --gradient-sunset: linear-gradient(135deg, #FF6B35 0%, #FF0080 50%, #7928CA 100%);
+    --gradient-aurora: linear-gradient(135deg, #00D4FF 0%, #30D158 50%, #FFD23F 100%);
+    
+    /* Athletic Shadow System */
+    --shadow-fitness: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-glow: 0 0 20px rgba(255, 107, 53, 0.3);
+    --shadow-elevation: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --shadow-hero: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    --shadow-card: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadow-card-hover: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-floating: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    
+    /* Athletic Motion System */
+    --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-power: cubic-bezier(0.23, 1, 0.32, 1);
+    --transition-athletic: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-explosive: cubic-bezier(0.77, 0, 0.175, 1);
     
     /* Chart colors for fitness data */
-    --chart-1: 213 89% 52%;
-    --chart-2: 142 84% 24%;
-    --chart-3: 24 95% 53%;
-    --chart-4: 283 89% 52%;
-    --chart-5: 38 92% 50%;
-    
-    /* Fitness-specific gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(213 89% 52%), hsl(213 89% 65%));
-    --gradient-secondary: linear-gradient(135deg, hsl(142 84% 24%), hsl(142 70% 45%));
-    --gradient-hero: linear-gradient(135deg, hsl(213 89% 52%), hsl(142 84% 24%));
-    
-    /* Shadows and effects */
-    --shadow-fitness: 0 10px 30px -10px hsl(213 89% 52% / 0.3);
-    --shadow-glow: 0 0 40px hsl(213 89% 65% / 0.4);
-    
-    /* Other design tokens */
-    --radius: 0.75rem;
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --chart-1: 16 100% 60%;
+    --chart-2: 142 71% 45%;
+    --chart-3: 45 100% 62%;
+    --chart-4: 300 100% 50%;
+    --chart-5: 195 100% 50%;
     
     /* Sidebar colors */
-    --sidebar-background: 215 13% 98%;
-    --sidebar-foreground: 215 16% 22%;
-    --sidebar-primary: 213 89% 52%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 215 13% 94%;
-    --sidebar-accent-foreground: 215 16% 22%;
-    --sidebar-border: 215 13% 90%;
-    --sidebar-ring: 213 89% 52%;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 0 0% 0%;
+    --sidebar-primary: 16 100% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 94%;
+    --sidebar-accent-foreground: 0 0% 0%;
+    --sidebar-border: 0 0% 89%;
+    --sidebar-ring: 16 100% 60%;
   }
 
   .dark {
-    /* Dark mode fitness theme */
-    --background: 215 28% 7%;
-    --foreground: 215 13% 94%;
-    --card: 215 28% 9%;
-    --card-foreground: 215 13% 94%;
-    --popover: 215 28% 9%;
-    --popover-foreground: 215 13% 94%;
+    /* Dark Theme - Athletic Night Mode */
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    --card: 220 14% 11%;
+    --card-foreground: 0 0% 100%;
+    --popover: 220 14% 11%;
+    --popover-foreground: 0 0% 100%;
     
-    /* Primary: Bright Blue */
-    --primary: 213 89% 60%;
-    --primary-foreground: 215 28% 7%;
-    --primary-glow: 213 89% 70%;
+    /* Dark Nike-Inspired Palette */
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 220 13% 18%;
+    --secondary-foreground: 0 0% 100%;
+    --accent: 16 100% 60%;
+    --accent-foreground: 0 0% 100%;
     
-    /* Secondary: Bright Green */
-    --secondary: 142 70% 45%;
-    --secondary-foreground: 215 28% 7%;
-    --secondary-light: 142 70% 55%;
+    --muted: 220 14% 11%;
+    --muted-foreground: 220 9% 65%;
+    --border: 220 13% 18%;
+    --input: 220 13% 18%;
+    --ring: 0 0% 100%;
     
-    /* Accent: Bright Orange */
-    --accent: 24 95% 60%;
-    --accent-foreground: 215 28% 7%;
-    --accent-light: 24 95% 70%;
-    
-    /* Neutral tones */
-    --muted: 215 28% 15%;
-    --muted-foreground: 215 13% 65%;
-    --border: 215 28% 15%;
-    --input: 215 28% 15%;
-    --ring: 213 89% 60%;
-    
-    /* Status colors */
-    --destructive: 0 84% 65%;
-    --destructive-foreground: 215 28% 7%;
-    --success: 142 70% 45%;
-    --success-foreground: 215 28% 7%;
-    --warning: 38 92% 55%;
-    --warning-foreground: 215 28% 7%;
-    
-    /* Chart colors for dark mode */
-    --chart-1: 213 89% 60%;
-    --chart-2: 142 70% 45%;
-    --chart-3: 24 95% 60%;
-    --chart-4: 283 89% 60%;
-    --chart-5: 38 92% 55%;
-    
-    /* Dark mode gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(213 89% 60%), hsl(213 89% 70%));
-    --gradient-secondary: linear-gradient(135deg, hsl(142 70% 45%), hsl(142 70% 55%));
-    --gradient-hero: linear-gradient(135deg, hsl(213 89% 60%), hsl(142 70% 45%));
+    /* Dark gradients maintain energy */
+    --gradient-hero: linear-gradient(135deg, #000000 0%, #FF6B35 100%);
+    --gradient-secondary: linear-gradient(135deg, #2C2C2E 0%, #1C1C1E 100%);
     
     /* Dark mode shadows */
-    --shadow-fitness: 0 10px 30px -10px hsl(213 89% 60% / 0.4);
-    --shadow-glow: 0 0 40px hsl(213 89% 70% / 0.5);
+    --shadow-glow: 0 0 20px rgba(255, 107, 53, 0.4);
     
     /* Sidebar dark colors */
-    --sidebar-background: 215 28% 9%;
-    --sidebar-foreground: 215 13% 94%;
-    --sidebar-primary: 213 89% 60%;
-    --sidebar-primary-foreground: 215 28% 7%;
-    --sidebar-accent: 215 28% 15%;
-    --sidebar-accent-foreground: 215 13% 94%;
-    --sidebar-border: 215 28% 15%;
-    --sidebar-ring: 213 89% 60%;
+    --sidebar-background: 220 14% 11%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 16 100% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 13% 18%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 220 13% 18%;
+    --sidebar-ring: 16 100% 60%;
   }
 }
 
@@ -150,6 +147,275 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  }
+  
+  /* Premium Typography Scale */
+  .text-hero {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    font-weight: 700;
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+  }
+  
+  .text-display {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(1.875rem, 4vw, 2.25rem);
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+  
+  .text-athletic {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+}
+
+@layer components {
+  /* Premium Card System */
+  .card-premium {
+    @apply bg-card text-card-foreground rounded-xl border shadow-card transition-all duration-300;
+    transition-timing-function: var(--transition-athletic);
+  }
+  
+  .card-premium:hover {
+    box-shadow: var(--shadow-card-hover);
+    transform: translateY(-2px);
+  }
+  
+  .card-hero {
+    @apply bg-gradient-to-br from-black to-gray-900 text-white rounded-2xl overflow-hidden;
+    box-shadow: var(--shadow-hero);
+  }
+  
+  .card-energy {
+    background: var(--gradient-energy);
+    @apply text-white rounded-2xl overflow-hidden;
+    box-shadow: var(--shadow-elevation);
+  }
+  
+  .card-power {
+    background: var(--gradient-power);
+    @apply text-white rounded-2xl overflow-hidden;
+    box-shadow: var(--shadow-elevation);
+  }
+  
+  .card-success {
+    background: var(--gradient-success);
+    @apply text-white rounded-2xl overflow-hidden;
+    box-shadow: var(--shadow-elevation);
+  }
+  
+  /* Premium Button System */
+  .btn-athletic {
+    @apply font-semibold px-6 py-3 rounded-xl transition-all duration-200;
+    transition-timing-function: var(--transition-athletic);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+  
+  .btn-athletic:hover {
+    transform: translateY(-1px);
+  }
+  
+  .btn-athletic:active {
+    transform: translateY(0);
+  }
+  
+  .btn-primary {
+    @apply bg-black text-white hover:bg-gray-900;
+  }
+  
+  .btn-energy {
+    background: var(--gradient-energy);
+    @apply text-white shadow-lg;
+  }
+  
+  .btn-energy:hover {
+    filter: brightness(1.1);
+    box-shadow: var(--shadow-glow);
+  }
+  
+  /* Premium Progress Bars */
+  .progress-athletic {
+    @apply h-2 rounded-full overflow-hidden;
+    background: rgba(0, 0, 0, 0.1);
+  }
+  
+  .progress-athletic .progress-fill {
+    @apply h-full rounded-full transition-all duration-700;
+    transition-timing-function: var(--transition-power);
+  }
+  
+  .progress-energy .progress-fill {
+    background: var(--gradient-energy);
+  }
+  
+  .progress-success .progress-fill {
+    background: var(--gradient-success);
+  }
+  
+  .progress-power .progress-fill {
+    background: var(--gradient-power);
+  }
+  
+  /* Hero Sections */
+  .hero-section {
+    @apply relative overflow-hidden rounded-2xl;
+    background: var(--gradient-hero);
+    min-height: 300px;
+  }
+  
+  .hero-overlay {
+    @apply absolute inset-0 bg-black bg-opacity-40;
+  }
+  
+  .hero-content {
+    @apply relative z-10 p-8 flex flex-col justify-end h-full text-white;
+  }
+  
+  /* Floating Elements */
+  .floating-card {
+    @apply fixed bottom-6 right-6 z-50;
+    box-shadow: var(--shadow-floating);
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  /* Athletic Animations */
+  .animate-bounce-in {
+    animation: bounceIn 0.5s var(--transition-bounce);
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.6s var(--transition-power);
+  }
+  
+  .animate-scale-in {
+    animation: scaleIn 0.4s var(--transition-athletic);
+  }
+  
+  @keyframes bounceIn {
+    0% { 
+      transform: scale(0.3); 
+      opacity: 0; 
+    }
+    50% { 
+      transform: scale(1.05); 
+    }
+    70% { 
+      transform: scale(0.9); 
+    }
+    100% { 
+      transform: scale(1); 
+      opacity: 1; 
+    }
+  }
+  
+  @keyframes slideUp {
+    0% { 
+      transform: translateY(100px); 
+      opacity: 0; 
+    }
+    100% { 
+      transform: translateY(0); 
+      opacity: 1; 
+    }
+  }
+  
+  @keyframes scaleIn {
+    0% { 
+      transform: scale(0.9); 
+      opacity: 0; 
+    }
+    100% { 
+      transform: scale(1); 
+      opacity: 1; 
+    }
+  }
+  
+  /* Gradient Text */
+  .text-gradient-energy {
+    background: var(--gradient-energy);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .text-gradient-power {
+    background: var(--gradient-power);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .text-gradient-success {
+    background: var(--gradient-success);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+/* Utility Classes for Premium Effects */
+@layer utilities {
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .shadow-hero {
+    box-shadow: var(--shadow-hero);
+  }
+  
+  .shadow-floating {
+    box-shadow: var(--shadow-floating);
+  }
+  
+  .transition-athletic {
+    transition-timing-function: var(--transition-athletic);
+  }
+  
+  .transition-power {
+    transition-timing-function: var(--transition-power);
+  }
+  
+  .transition-explosive {
+    transition-timing-function: var(--transition-explosive);
+  }
+  
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .bg-gradient-energy {
+    background: var(--gradient-energy);
+  }
+  
+  .bg-gradient-power {
+    background: var(--gradient-power);
+  }
+  
+  .bg-gradient-success {
+    background: var(--gradient-success);
+  }
+  
+  .bg-gradient-midnight {
+    background: var(--gradient-midnight);
+  }
+  
+  .bg-gradient-sunset {
+    background: var(--gradient-sunset);
+  }
+  
+  .bg-gradient-aurora {
+    background: var(--gradient-aurora);
   }
 }
